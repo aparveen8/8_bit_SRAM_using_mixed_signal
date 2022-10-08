@@ -4,8 +4,10 @@
 
 - [Abstract](#abstract)
 - [Block Diagram](#block diagram)
-- [Reference Waveform](#reference-waveform)
-- [Circuit Details](#circuit-details)
+- [6T RAM Cell](#6T RAM Cell)
+- [3*8 Decoder](#3*8 Decoder)
+- [1Bit SRAM Cell](1Bit SRAM Cell)
+- [Circuit Schematic Details](#circuit Circuit Schematic details)
 - [Software Used](#software-used)
 - [Circuit Diagram in eSim](#circuit-diagram-in-esim)
 - [Netlists](#netlists)
