@@ -85,12 +85,12 @@ The following is the schematic in eSim:
 
 ### Decoder
 <p align="center">
-  <img src="images/8 bit decoderwave.png"></br>
+  <img src="images/decoderwave.png"></br>
 </p>
 
 ### 6T SRAM
 <p align="center">
-  <img src="images/8 bit 6twaveform.png"></br>
+  <img src="images/6twaveform.png"></br>
 </p>
 
 ### 1 Bit SRAM Cell
