@@ -3,7 +3,7 @@
 ## 8 Bit SRAM Mixed Signal Design using eSim with SKY130 PDK & NgVeri
 
 - [Abstract](#abstract)
-- [Block Diagram] (#block diagram)
+- [Block Diagram](#block diagram)
 - [Reference Waveform](#reference-waveform)
 - [Circuit Details](#circuit-details)
 - [Software Used](#software-used)
@@ -41,28 +41,7 @@ Here, SRAM cell is designed with two inverters, which are coss-linked like as la
 
 ## 3*8 Decoder
 
-The verilog code for the above decoder is as follows:
-
-  module ayesh_decoder_3x8(y,a,en);
-	input [2:0]a;
-	input en;
-	output reg [7:0]y;
-	always @(a) 
-  	begin
-    if(en==1)
-      begin
-        y[0] = !a[0] & !a[1] & !a[2];
-        y[1] = a[0] & !a[1] & !a[2];
-        y[2] = !a[0] & a[1] & !a[2];
-        y[3] = a[0] & a[1] & !a[2];
-        y[4] = !a[0] & !a[1] & a[2];
-        y[5] = a[0] & !a[1] & a[2];
-        y[6] = !a[0] & a[1] & a[2];
-        y[7] = a[0] & a[1] & a[2];
-      end
-    else y = 8'b00000000;
-  end
-endmodule
+The verilog code for the above decoder is given.
 
 <p align="center">
   <img src="images/decoder.png"></br>
@@ -75,15 +54,7 @@ endmodule
 
 ## Writer Circuit
 
-This circuit provides the input to the 6T SRAM cell. The funtionality of this block is to provide bl and blb to the SRAM cell, when the inputs wl and din are high the bl and blb will also be high else both the outputs will be low. For this design the Writer Circuit has been designed using the NgVeri feature of the eSIM. The Verilog code is as follows:
-	module ayesha_writer_circuit(bl,blb,wl,din);
-	input wl,din;
-	output reg bl,blb;
-	always @(wl,din) begin
-	bl = wl & din;
-	blb = !bl;
-	end
-	endmodule
+This circuit provides the input to the 6T SRAM cell. The funtionality of this block is to provide bl and blb to the SRAM cell, when the inputs wl and din are high the bl and blb will also be high else both the outputs will be low. For this design the Writer Circuit has been designed using the NgVeri feature of the eSIM. The Verilog code is given above.
 
 <p align="center">
   <img src="images/writer.png"></br>
@@ -91,8 +62,15 @@ This circuit provides the input to the 6T SRAM cell. The funtionality of this bl
 
 ## 1Bit SRAM Cell
 
+<p align="center">
+  <img src="images/1bitram.png"></br>
+</p>
+
 #### Circuit Schematic Details
 The following is the schematic in eSim:
+<p align="center">
+  <img src="images/8 bit schematic.png"></br>
+</p>
 
 # Softwares Used:
 •  eSim: It is an Open Source EDA developed by FOSSEE, IIT Bombay. It is used for electronic circuit simulation. It is made by the combination of two software namely NgSpice and KiCAD. For more details refer:<a href='https://www.esim.fossee.in/'>Here</a></br>
@@ -106,11 +84,27 @@ The following is the schematic in eSim:
 ## Simulations:
 
 ### Decoder
+<p align="center">
+  <img src="images/8 bit decoderwave.png"></br>
+</p>
+
 ### 6T SRAM
+<p align="center">
+  <img src="images/8 bit 6twaveform.png"></br>
+</p>
+
 ### 1 Bit SRAM Cell
+<p align="center">
+  <img src="images/1bit_ram_transient.png"></br>
+</p>
+
 ## Final Simulation of 8 bit SRAM
+<p align="center">
+  <img src="images/outputwave.png"></br>
+</p>
 
 ## Netlists
+
 
 
 
