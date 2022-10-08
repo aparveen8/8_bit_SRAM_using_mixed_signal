@@ -41,6 +41,29 @@ Here, SRAM cell is designed with two inverters, which are coss-linked like as la
 
 ## 3*8 Decoder
 
+The verilog code for the above decoder is as follows:
+
+   module ayesh_decoder_3x8(y,a,en);
+input [2:0]a;
+input en;
+output reg [7:0]y;
+always @(a) 
+  begin
+    if(en==1)
+      begin
+        y[0] = !a[0] & !a[1] & !a[2];
+        y[1] = a[0] & !a[1] & !a[2];
+        y[2] = !a[0] & a[1] & !a[2];
+        y[3] = a[0] & a[1] & !a[2];
+        y[4] = !a[0] & !a[1] & a[2];
+        y[5] = a[0] & !a[1] & a[2];
+        y[6] = !a[0] & a[1] & a[2];
+        y[7] = a[0] & a[1] & a[2];
+      end
+    else y = 8'b00000000;
+  end
+endmodule
+
 <p align="center">
   <img src="images/decoder.png"></br>
 </p>
@@ -49,7 +72,9 @@ Here, SRAM cell is designed with two inverters, which are coss-linked like as la
   <img src="images/3-to-8_Decoder_Truth_Tabl.jpg"></br>
 </p>
 ## Writer Circuit
-
+<p align="center">
+  <img src="images/writer.jpg"></br>
+</p>
 ## 1Bit SRAM Cell
 
 #### Circuit Schematic Details
