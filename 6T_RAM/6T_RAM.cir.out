@@ -1,0 +1,29 @@
+* /home/aparveen111/esim-workspace/6t_ram/6t_ram.cir
+
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__r+c.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__inductors.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.lib "/usr/share/local/sky130_fd_pr/models/sky130.lib.spice" tt
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__pnp.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__linear.model.spice"
+.include "/usr/share/local/sky130_fd_pr/models/sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+xsc2 net-_sc2-pad1_ q net-_sc2-pad3_ net-_sc2-pad3_ sky130_fd_pr__pfet_01v8_lvt 
+xsc3 net-_sc2-pad1_ q gnd gnd sky130_fd_pr__nfet_01v8_lvt 
+xsc4 q net-_sc2-pad1_ net-_sc2-pad3_ net-_sc2-pad3_ sky130_fd_pr__pfet_01v8_lvt 
+xsc5 q net-_sc2-pad1_ gnd gnd sky130_fd_pr__nfet_01v8_lvt 
+xsc1 q wl bl gnd sky130_fd_pr__nfet_01v8_lvt 
+xsc6 blb wl net-_sc2-pad1_ gnd sky130_fd_pr__nfet_01v8_lvt 
+v3  bl gnd pulse(0 1.8 1u 1p 1p 1u 2u)
+v2  wl gnd pulse(0 1.8 0 1p 1p 5u 10u)
+v1 net-_sc2-pad3_ gnd  dc 1.8
+v4  blb gnd pulse(0 1.8 0 1p 1p 1u 2u)
+* s c m o d e
+.tran 1e-06 16e-06 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
