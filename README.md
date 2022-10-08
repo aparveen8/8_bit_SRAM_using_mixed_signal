@@ -3,7 +3,7 @@
 ## 8 Bit SRAM Mixed Signal Design using eSim with SKY130 PDK & NgVeri
 
 - [Abstract](#abstract)
-- [Block Diagram] (#Block Diagram)
+- [Block Diagram] (#block diagram)
 - [Reference Waveform](#reference-waveform)
 - [Circuit Details](#circuit-details)
 - [Software Used](#software-used)
@@ -77,12 +77,12 @@ endmodule
 
 This circuit provides the input to the 6T SRAM cell. The funtionality of this block is to provide bl and blb to the SRAM cell, when the inputs wl and din are high the bl and blb will also be high else both the outputs will be low. For this design the Writer Circuit has been designed using the NgVeri feature of the eSIM. The Verilog code is as follows:
 	module ayesha_writer_circuit(bl,blb,wl,din);
-  	input wl,din;
- 	 output reg bl,blb;
-  	always @(wl,din) begin
-   	 bl = wl & din;
-    	blb = !bl;
-  	end
+	input wl,din;
+	output reg bl,blb;
+	always @(wl,din) begin
+	bl = wl & din;
+	blb = !bl;
+	end
 	endmodule
 
 <p align="center">
