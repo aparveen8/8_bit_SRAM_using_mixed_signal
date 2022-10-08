@@ -3,7 +3,7 @@
 ## 8 Bit SRAM Mixed Signal Design using eSim with SKY130 PDK & NgVeri
 
 - [Abstract](#abstract)
-- [Block Diagram](#Block Diagram)
+- [Block Diagram] (#Block Diagram)
 - [Reference Waveform](#reference-waveform)
 - [Circuit Details](#circuit-details)
 - [Software Used](#software-used)
