@@ -2,8 +2,8 @@
 
 ## 8 Bit SRAM Mixed Signal Design using eSim with SKY130 PDK & NgVeri
 
-- [Abstract](# abstract)
-- [Block Diagram](# Block Diagram)
+- [Abstract](#abstract)
+- [Block Diagram](#Block Diagram)
 - [Reference Waveform](#reference-waveform)
 - [Circuit Details](#circuit-details)
 - [Software Used](#software-used)
@@ -24,7 +24,7 @@ Here, have presented work on 6T SRAM cell circuit based on MOSFET is designed fo
 
 The components required are a 3X8 Decoder implemented in digital domain using NgVeri, a 1-bit RAM cell which further consists of writer circuit, 6T RAM cell and a sensory circuit all implemented in analog domain using eSIM with SKY130. 3*8 decoder will be used to select the 1-bit RAM cell to which we want to perform the read/write operation to. Basic block diagram of a 1-bit SRAM will look like this:
 <p align="center">
-  <img src="Images/images/sram_block_diagram.png"></br>
+  <img src="Images/sram_block_diagram.png"></br>
 </p>
 
 ## 6T RAM Cell
