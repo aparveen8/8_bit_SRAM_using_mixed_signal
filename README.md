@@ -24,29 +24,29 @@ Here, have presented work on 6T SRAM cell circuit based on MOSFET is designed fo
 
 The components required are a 3X8 Decoder implemented in digital domain using NgVeri, a 1-bit RAM cell which further consists of writer circuit, 6T RAM cell and a sensory circuit all implemented in analog domain using eSIM with SKY130. 3*8 decoder will be used to select the 1-bit RAM cell to which we want to perform the read/write operation to. Basic block diagram of a 1-bit SRAM will look like this:
 <p align="center">
-  <img src="aparveen8/8_bit_SRAM_using_mixed_signal/images/3-to-8_Decoder_Truth_Tabl.jpg"></br>
+  <img src="images/3-to-8_Decoder_Truth_Tabl.jpg"></br>
 </p>
 
 ## 6T RAM Cell
 
 We interconnect all the components to get the below schematic. Then after verifying the functionality the circuit can be converted to a symbol using the Sub-Circuit features. The Symbol and schematic will look as follows:
 <p align="center">
-  <img src="Images/images/subckt6t.png"></br>
+  <img src="images/subckt6t.png"></br>
 </p>
 
 Here, SRAM cell is designed with two inverters, which are coss-linked like as latch form. This latch is made connection to two bit line along with two transistors M1 and SC6 as shown in Fig. Now both transistors are capable to alter their modes (open or close) under control of word line, and this entire process is controlled by address decoder. When word line goes to ground level then both transistors get turned off, and latch starts to retain own state.
 <p align="center">
-  <img src="Images/images/6T_SRAM.png"></br>
+  <img src="images/6T_SRAM.png"></br>
 </p>
 
 ## 3*8 Decoder
 
 <p align="center">
-  <img src="Images/images/decoder.png"></br>
+  <img src="images/decoder.png"></br>
 </p>
 ### Truth Table
 <p align="center">
-  <img src="Images/images/3-to-8_Decoder_Truth_Tabl.jpg"></br>
+  <img src="images/3-to-8_Decoder_Truth_Tabl.jpg"></br>
 </p>
 ## Writer Circuit
 
