@@ -1,0 +1,25 @@
+* /home/aparveen111/eSim-Workspace/decoder/decoder.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Sat 08 Oct 2022 12:24:14 PM IST
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ ayesh_decoder_3x8		
+U3  Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ y7 y6 y5 y4 y3 y2 y1 y0 dac_bridge_8		
+U2  a2 a1 a0 Net-_U2-Pad4_ Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ adc_bridge_4		
+v4  Net-_U2-Pad4_ GND DC		
+v3  a0 GND pulse		
+v2  a1 GND pulse		
+v1  a2 GND pulse		
+U4  y7 plot_v1		
+U5  y6 plot_v1		
+U6  y5 plot_v1		
+U7  y4 plot_v1		
+U9  y2 plot_v1		
+U10  y1 plot_v1		
+U11  y0 plot_v1		
+U8  y3 plot_v1		
+
+.end
