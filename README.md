@@ -43,12 +43,12 @@ Here, SRAM cell is designed with two inverters, which are coss-linked like as la
 
 The verilog code for the above decoder is as follows:
 
-   module ayesh_decoder_3x8(y,a,en);
-input [2:0]a;
-input en;
-output reg [7:0]y;
-always @(a) 
-  begin
+  module ayesh_decoder_3x8(y,a,en);
+	input [2:0]a;
+	input en;
+	output reg [7:0]y;
+	always @(a) 
+  	begin
     if(en==1)
       begin
         y[0] = !a[0] & !a[1] & !a[2];
@@ -67,24 +67,28 @@ endmodule
 <p align="center">
   <img src="images/decoder.png"></br>
 </p>
+
 ### Truth Table
 <p align="center">
   <img src="images/3-to-8_Decoder_Truth_Tabl.jpg"></br>
 </p>
+
 ## Writer Circuit
+
 This circuit provides the input to the 6T SRAM cell. The funtionality of this block is to provide bl and blb to the SRAM cell, when the inputs wl and din are high the bl and blb will also be high else both the outputs will be low. For this design the Writer Circuit has been designed using the NgVeri feature of the eSIM. The Verilog code is as follows:
-module ayesha_writer_circuit(bl,blb,wl,din);
-  input wl,din;
-  output reg bl,blb;
-  always @(wl,din) begin
-    bl = wl & din;
-    blb = !bl;
-  end
-endmodule
+	module ayesha_writer_circuit(bl,blb,wl,din);
+  	input wl,din;
+ 	 output reg bl,blb;
+  	always @(wl,din) begin
+   	 bl = wl & din;
+    	blb = !bl;
+  	end
+	endmodule
 
 <p align="center">
   <img src="images/writer.png"></br>
 </p>
+
 ## 1Bit SRAM Cell
 
 #### Circuit Schematic Details
