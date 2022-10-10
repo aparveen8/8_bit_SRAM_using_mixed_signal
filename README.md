@@ -107,13 +107,13 @@ The following is the schematic in eSim:
 </p>
 
 # Netlists
-• Refer to the netlist of the 3X8 Decoder here: <a href='3x8_decoder/3x8_decoder.cir.out'>Netlist</a></br>
+• Refer to the netlist of the 3X8 Decoder here: <a href='decoder/decoder.cir.out'>Netlist</a></br>
 
-• Refer to the netlist of the 6T SRAM Cell here: <a href='6T_RAM_cell/6T_RAM_cell.cir.out'>Netlist</a></br>
+• Refer to the netlist of the 6T SRAM Cell here: <a href='6T_RAM/6T_RAM.cir.out'>Netlist</a></br>
 
-• Refer to the netlist of the 1-Bit SRAM here: <a href='1-bit_RAM/1-bit_RAM.cir.out'>Netlist</a></br>
+• Refer to the netlist of the 1-Bit SRAM here: <a href='1bitsram/1bitsram.cir.out'>Netlist</a></br>
 
-• Refer to the netlist of the 8-Bit SRAM here: <a href='8-bit_RAM/8-bit_RAM.cir.out'>Netlist</a></br>
+• Refer to the netlist of the 8-Bit SRAM here: <a href='8_bit_SRAM_schematic/8_bit_SRAM_schematic.cir.out'>Netlist</a></br>
 
 
 
