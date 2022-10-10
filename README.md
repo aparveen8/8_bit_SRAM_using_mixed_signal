@@ -3,11 +3,11 @@ This repository presents the mixed signal design of 8-Bit SRAM implemented using
 
 # Table of Contents:
 - [Abstract](#Abstract)
-- [Block Diagram](#Block Diagram)
-- [6T RAM Cell](#6T RAM Cell)
-- [3*8 Decoder](#3*8 Decoder)
-- [1Bit SRAM Cell](#1Bit SRAM Cell)
-- [Circuit Schematic Details](#circuit Circuit Schematic details)
+- [Block Diagram](#Block-Diagram)
+- [6T RAM Cell](#6T-RAM-Cell)
+- [3*8 Decoder](#3*8-Decoder)
+- [1Bit SRAM Cell](#1Bit-SRAM-Cell)
+- [Circuit Schematic Details](#circuit-Schematic-details)
 - [Software Used](#software-used)
 - [Simulations:](#simulations:)
 - [Netlists](#netlists)
