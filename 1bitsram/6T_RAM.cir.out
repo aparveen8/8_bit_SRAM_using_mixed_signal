@@ -1,0 +1,22 @@
+* /home/aparveen111/esim-2.3/library/subcircuitlibrary/6t_ram/6t_ram.cir
+
+xsc2 net-_sc2-pad1_ q net-_sc2-pad3_ net-_sc2-pad3_ sky130_fd_pr__pfet_01v8_lvt 
+xsc3 net-_sc2-pad1_ q gnd gnd sky130_fd_pr__nfet_01v8_lvt 
+xsc4 q net-_sc2-pad1_ net-_sc2-pad3_ net-_sc2-pad3_ sky130_fd_pr__pfet_01v8_lvt 
+xsc5 q net-_sc2-pad1_ gnd gnd sky130_fd_pr__nfet_01v8_lvt 
+xsc1 q wl bl gnd sky130_fd_pr__nfet_01v8_lvt 
+xsc6 blb wl net-_sc2-pad1_ gnd sky130_fd_pr__nfet_01v8_lvt 
+v3  bl gnd pulse(0 0 0 0 0 0 0)
+v2  wl gnd pulse(0 0 0 0 0 0 0)
+v1 net-_sc2-pad3_ gnd  dc 0
+v4  blb gnd pulse(0 0 0 0 0 0 0)
+* u1  bl wl q blb port
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
