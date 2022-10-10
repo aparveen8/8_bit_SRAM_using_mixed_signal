@@ -1,0 +1,28 @@
+* /home/aparveen111/eSim-Workspace/8_bit_SRAM_schematic/8_bit_SRAM_schematic.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Mon 10 Oct 2022 02:23:25 PM IST
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+X4  din Net-_U3-Pad12_ ren ? ayesha_1bit_RAM		
+X5  din Net-_U3-Pad13_ ren ? ayesha_1bit_RAM		
+X6  din Net-_U3-Pad14_ ren ? ayesha_1bit_RAM		
+X7  din Net-_U3-Pad15_ ren ? ayesha_1bit_RAM		
+X8  din Net-_U3-Pad16_ ren ? ayesha_1bit_RAM		
+X3  din Net-_U3-Pad11_ ren ? ayesha_1bit_RAM		
+X2  din Net-_U3-Pad10_ ren ? ayesha_1bit_RAM		
+X1  din Net-_U3-Pad9_ ren ? ayesha_1bit_RAM		
+U3  Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ Net-_U3-Pad9_ Net-_U3-Pad10_ Net-_U3-Pad11_ Net-_U3-Pad12_ Net-_U3-Pad13_ Net-_U3-Pad14_ Net-_U3-Pad15_ Net-_U3-Pad16_ dac_bridge_8		
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ Net-_U1-Pad5_ Net-_U1-Pad6_ Net-_U1-Pad7_ Net-_U1-Pad8_ Net-_U1-Pad9_ Net-_U1-Pad10_ Net-_U1-Pad11_ Net-_U1-Pad12_ ayesh_decoder_3x8		
+U2  a2 a1 a0 Net-_U2-Pad4_ Net-_U1-Pad1_ Net-_U1-Pad2_ Net-_U1-Pad3_ Net-_U1-Pad4_ adc_bridge_4		
+v4  Net-_U2-Pad4_ GND DC		
+v3  a0 GND pulse		
+v2  a1 GND pulse		
+v1  a2 GND pulse		
+v6  din GND pulse		
+v5  ren GND pulse		
+scmode1  SKY130mode		
+
+.end

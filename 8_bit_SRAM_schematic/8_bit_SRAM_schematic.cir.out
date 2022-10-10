@@ -1,0 +1,41 @@
+* /home/aparveen111/esim-workspace/8_bit_sram_schematic/8_bit_sram_schematic.cir
+
+.include ayesha_1bit_RAM.sub
+.include ""
+.lib "" 
+x4 din net-_u3-pad12_ ren ? ayesha_1bit_RAM
+x5 din net-_u3-pad13_ ren ? ayesha_1bit_RAM
+x6 din net-_u3-pad14_ ren ? ayesha_1bit_RAM
+x7 din net-_u3-pad15_ ren ? ayesha_1bit_RAM
+x8 din net-_u3-pad16_ ren ? ayesha_1bit_RAM
+x3 din net-_u3-pad11_ ren ? ayesha_1bit_RAM
+x2 din net-_u3-pad10_ ren ? ayesha_1bit_RAM
+x1 din net-_u3-pad9_ ren ? ayesha_1bit_RAM
+* u3  net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ net-_u3-pad9_ net-_u3-pad10_ net-_u3-pad11_ net-_u3-pad12_ net-_u3-pad13_ net-_u3-pad14_ net-_u3-pad15_ net-_u3-pad16_ dac_bridge_8
+* u1  net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ ayesh_decoder_3x8
+* u2  a2 a1 a0 net-_u2-pad4_ net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ adc_bridge_4
+v4 net-_u2-pad4_ gnd  dc 1.8
+v3  a0 gnd pulse(0 1.8 0 1p 1p 1m 2m)
+v2  a1 gnd pulse(0 1.8 0 1p 1p 2m 4m)
+v1  a2 gnd pulse(0 1.8 0 1p 1p 4m 8m)
+v6  din gnd pulse(0 1.8 0 1p 1p 8m 14m)
+v5  ren gnd pulse(0 1.8 0 1p 1p 16m 32m)
+* s c m o d e
+a1 [net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ ] [net-_u3-pad9_ net-_u3-pad10_ net-_u3-pad11_ net-_u3-pad12_ net-_u3-pad13_ net-_u3-pad14_ net-_u3-pad15_ net-_u3-pad16_ ] u3
+a2 [net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ ] [net-_u1-pad4_ ] [net-_u1-pad5_ net-_u1-pad6_ net-_u1-pad7_ net-_u1-pad8_ net-_u1-pad9_ net-_u1-pad10_ net-_u1-pad11_ net-_u1-pad12_ ] u1
+a3 [a2 a1 a0 net-_u2-pad4_ ] [net-_u1-pad1_ net-_u1-pad2_ net-_u1-pad3_ net-_u1-pad4_ ] u2
+* Schematic Name:                             dac_bridge_8, NgSpice Name: dac_bridge
+.model u3 dac_bridge(out_low=0.0 out_high=1.8 out_undef=0.5 input_load=1.0e-12 t_rise=1p t_fall=1p ) 
+* Schematic Name:                             ayesh_decoder_3x8, NgSpice Name: ayesh_decoder_3x8
+.model u1 ayesh_decoder_3x8(rise_delay=1p fall_delay=1p input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             adc_bridge_4, NgSpice Name: adc_bridge
+.model u2 adc_bridge(in_low=0 in_high=1.8 rise_delay=1p fall_delay=1p ) 
+.tran 2me-00 20me-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
